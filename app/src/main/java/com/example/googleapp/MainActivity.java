@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.google_icon);
-        getSupportActionBar().setTitle("   Google");
+        getSupportActionBar().setLogo(R.drawable.aibuddy_icon);
+        getSupportActionBar().setTitle("  AIBuddy");
 
         webView = findViewById(R.id.webView);
         pgBar = findViewById(R.id.pgBar);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         CookieManager.getInstance().setAcceptCookie(true);
 
-        webView.loadUrl("https://www.google.com/");
+        webView.loadUrl("https://aibuddy.tech/login");
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (webView.getUrl().equals("https://www.google.com/")) {
+        if (webView.getUrl().equals("https://aibuddy.tech/login")) {
             super.onBackPressed();
         } else if (webView.canGoBack()) {
             webView.goBack();
